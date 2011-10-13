@@ -158,3 +158,6 @@
 [submodule "bundle/ZoomWin"]
 	path = bundle/ZoomWin
 	url = git://github.com/vim-scripts/ZoomWin.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = git://github.com/majutsushi/tagbar.git
