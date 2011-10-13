@@ -259,7 +259,7 @@ else
         set term=gnome-256color
         colorscheme railscasts
     else
-        colorscheme default
+        colorscheme v13
     endif
 endif
 
