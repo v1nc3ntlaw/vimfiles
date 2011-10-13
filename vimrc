@@ -423,3 +423,6 @@ let g:user_zen_settings = {
 
 " 設定 Vimwiki 的資料夾位置和附檔名
 let g:vimwiki_list=[{'path':'~/Dropbox/Writer','ext': '.txt'}]
+
+" ZoomWin hotkey
+map <Leader>= :ZoomWin<CR>
