@@ -421,6 +421,79 @@ let g:user_zen_settings = {
   \  },
  \}
 
+" UTF-8 Big5 Setting
+" 以下四個設下去. vim 編出來都是 utf-8 編碼的.
+set fileencodings=utf-8,big5
+set fileencoding=utf-8
+" 檔案存檔會存成utf-8編碼
+set termencoding=utf-8
+set enc=utf-8
+set tenc=utf8
+
+" 快捷鍵設定 for C/C++ coding
+map   <F5>   :cp<CR>
+map   <F6>   :cn<CR>
+map   <F7>   :make<CR>   :copen<CR>   <C-W>10_
+map   <F8>   :!./%<<CR>
+set makeprg=make\ %<
+
+" 快捷鍵設定 切換 Buffer
+if $OSTYPE == 'darwin10.0'
+  nnoremap <F11>       :bp!<CR>
+  nnoremap <Leader>11  :bp!<CR>
+  inoremap <F11> <ESC> :bp!<CR>
+
+  nnoremap <F12>       :bn!<CR>
+  nnoremap <Leader>12  :bn!<CR>
+  inoremap <F12> <ESC> :bn!<CR>
+else
+  nnoremap <F3>       :bp!<CR>
+  nnoremap <Leader>3  :bp!<CR>
+  inoremap <F3> <ESC> :bp!<CR>
+
+  nnoremap <F4>       :bn!<CR>
+  nnoremap <Leader>4  :bn!<CR>
+  inoremap <F4> <ESC> :bn!<CR>
+endif
+
+" 一些 search 的設定
+map <F2> :execute "Ack \'" . expand("<cword>") . "\'"<CR>
+cabbrev lvim
+      \ lvim /\<lt><C-R><C-W>\>/gj
+      \ *<C-R>=(expand("%:e")=="" ? "" : ".".expand("%:e"))<CR>
+      \ <Bar> lw
+      \ <C-Left><C-Left><C-Left>
+
+" 使用 Ctrl + 左右鍵快速切換 buffer
+map <C-right> <ESC>:bn<CR>
+map <C-left> <ESC>:bp<CR>
+
+" 使用上下鍵在自動換行之間移動
+map <DOWN> gj
+map <UP> gk
+imap <DOWN> <ESC>gji
+imap <UP> <ESC>gki
+
+" 使用 Ctrl+F2 隱藏或顯示 Gvim 的選單
+set guioptions-=T
+set guioptions-=m
+map <silent> <C-F2> :if &guioptions =~# 'T' <Bar>
+      \set guioptions-=T <Bar>
+      \set guioptions-=m <Bar>
+      \else <Bar>
+      \set guioptions+=T <Bar>
+      \set guioptions+=m <Bar>
+      \endif<CR>
+
+" 自動到最後離開的位置
+if has("autocmd")
+  autocmd BufRead *.txt set tw=78
+  autocmd BufReadPost *
+        \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+        \   exe "normal g'\"" |
+        \ endif
+endif
+
 " 設定 Vimwiki 的資料夾位置和附檔名
 let g:vimwiki_list=[{'path':'~/Dropbox/Writer','ext': '.txt'}]
 
