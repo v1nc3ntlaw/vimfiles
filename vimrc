@@ -499,3 +499,9 @@ let g:vimwiki_list=[{'path':'~/Dropbox/Writer','ext': '.txt'}]
 
 " ZoomWin hotkey
 map <Leader>= :ZoomWin<CR>
+
+" hide GUI scrollbar
+set guioptions-=r " don't show scrollbars
+set guioptions-=l " don't show scrollbars
+set guioptions-=R " don't show scrollbars
+set guioptions-=L " don't show scrollbars
