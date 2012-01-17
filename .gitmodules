@@ -1,6 +1,6 @@
 [submodule "snippets"]
 	path = snippets
-	url = git://github.com/akitaonrails/snipmate-snippets.git
+	url = git://github.com/asux/snipmate-snippets.git
   ignore = dirty
 [submodule "bundle/rails"]
 	path = bundle/rails
@@ -60,7 +60,7 @@
   ignore = dirty
 [submodule "bundle/Command-T"]
 	path = bundle/Command-T
-	url = git://github.com/akitaonrails/Command-T.git
+	url = git://github.com/wincent/Command-T.git
   ignore = dirty
 [submodule "bundle/textile"]
 	path = bundle/textile
@@ -161,3 +161,6 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = git://github.com/majutsushi/tagbar.git
+[submodule "bundle/vim-capybara"]
+	path = bundle/vim-capybara
+	url = git://github.com/asux/vim-capybara.git
