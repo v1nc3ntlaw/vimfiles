@@ -164,3 +164,6 @@
 [submodule "bundle/vim-capybara"]
 	path = bundle/vim-capybara
 	url = git://github.com/asux/vim-capybara.git
+[submodule "bundle/vim-powerline"]
+	path = bundle/vim-powerline
+	url = git://github.com/Lokaltog/vim-powerline.git
