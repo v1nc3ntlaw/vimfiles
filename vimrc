@@ -6,7 +6,7 @@ filetype on
 filetype off
 
 "load pathogen managed plugins
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 
 "Use Vim settings, rather then Vi settings (much better!).
 "This must be first, because it changes other options as a side effect.
@@ -178,8 +178,9 @@ function! s:Median(nums)
 endfunction
 
 "indent settings
-set shiftwidth=2
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set expandtab
 set autoindent
 
@@ -268,7 +269,6 @@ endif
 " nmap <silent> <Leader>q <Plug>PeepOpen
 
 silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
-nnoremap <silent> <C-f> :call FindInNERDTree()<CR>
 
 "make <c-l> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<CR><C-L>
@@ -505,3 +505,19 @@ set guioptions-=r " don't show scrollbars
 set guioptions-=l " don't show scrollbars
 set guioptions-=R " don't show scrollbars
 set guioptions-=L " don't show scrollbars
+
+" when press { + Enter, the {} block will expand.
+imap {<CR> {}<ESC>i<CR><ESC>O
+
+" NERDTree settings
+nmap wm :NERDTree<cr>
+let NERDTreeIgnore=['\.swp$']
+
+nnoremap <Esc>A <up>
+nnoremap <Esc>B <down>
+nnoremap <Esc>C <right>
+nnoremap <Esc>D <left>
+inoremap <Esc>A <up>
+inoremap <Esc>B <down>
+inoremap <Esc>C <right>
+inoremap <Esc>D <left>

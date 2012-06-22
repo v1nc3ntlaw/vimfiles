@@ -105,14 +105,15 @@ h2. Dependencies
 
 You will need these dependencies figured out:
 
-* Ruby (for the fuzzy finder plugin)
+* Ruby (for the Command-T plugin)
 * Exuberant Ctags (http://ctags.sourceforge.net/)
 * Ncurses-term (in Linux only)
+* curl (for the Gist plugin)
 
 In Ubuntu, for example, you will have to do:
 
 <pre><code>
-apt-get install exuberant-ctags ncurses-term
+apt-get install exuberant-ctags ncurses-term curl
 </code></pre>
 
 In OS X, you can install ctags with homebrew
@@ -138,7 +139,7 @@ extension, so you will have to do this:
 
 <pre><code>
 rvm use system # use this line if using rvm
-cd ~/.vim/bundle/Command-T/ruby/command-t
+cd ~/.vim/bundle/vim-command-t/ruby/command-t
 ruby extconf.rb
 make
 </code></pre>

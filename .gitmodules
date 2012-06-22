@@ -58,10 +58,6 @@
 	path = bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
   ignore = dirty
-[submodule "bundle/Command-T"]
-	path = bundle/Command-T
-	url = git://github.com/wincent/Command-T.git
-  ignore = dirty
 [submodule "bundle/textile"]
 	path = bundle/textile
 	url = git://github.com/timcharper/textile.vim.git
@@ -167,3 +163,24 @@
 [submodule "bundle/vim-powerline"]
 	path = bundle/vim-powerline
 	url = git://github.com/Lokaltog/vim-powerline.git
+[submodule "bundle/vim-autoclose"]
+	path = bundle/vim-autoclose
+	url = git://github.com/Townk/vim-autoclose.git
+[submodule "bundle/vim-golang"]
+	path = bundle/vim-golang
+	url = git://github.com/jnwhiteh/vim-golang.git
+[submodule "bundle/gist-vim"]
+	path = bundle/gist-vim
+	url = git://github.com/mattn/gist-vim.git
+[submodule "bundle/git-vim"]
+	path = bundle/git-vim
+	url = git://github.com/motemen/git-vim.git
+[submodule "bundle/grep-vim"]
+	path = bundle/grep-vim
+	url = git://github.com/vim-scripts/grep.vim.git
+[submodule "bundle/vim-indexed-search"]
+	path = bundle/vim-indexed-search
+	url = git://github.com/henrik/vim-indexed-search.git
+[submodule "bundle/vim-command-t"]
+	path = bundle/vim-command-t
+	url = git://github.com/wincent/Command-T.git
