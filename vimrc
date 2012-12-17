@@ -69,6 +69,9 @@ set laststatus=2
 
 "turn off needless toolbar on gvim/mvim
 set guioptions-=T
+"turn off the scroll bar
+set guioptions-=L
+set guioptions-=r
 
 "recalculate the trailing whitespace warning when idle, and after saving
 autocmd cursorhold,bufwritepost * unlet! b:statusline_trailing_space_warning
@@ -219,32 +222,28 @@ set ttymouse=xterm2
 "hide buffers when not displayed
 set hidden
 
-"Command-T configuration
-let g:CommandTMaxHeight=10
-let g:CommandTMatchWindowAtTop=1
+"Activate smartcase
+set ic
+set smartcase
 
 if has("gui_running")
     "tell the term has 256 colors
     set t_Co=256
 
-    colorscheme railscasts
+    colorscheme molokai
     set guitablabel=%M%t
     set lines=40
     set columns=115
 
     if has("gui_gnome")
         set term=gnome-256color
-        colorscheme railscasts
+        colorscheme molokai
         set guifont=Monospace\ Bold\ 12
     endif
 
     if has("gui_mac") || has("gui_macvim")
-        set guifont=Menlo:h14
-        " key binding for Command-T to behave properly
-        " uncomment to replace the Mac Command-T key to Command-T plugin
-        "macmenu &File.New\ Tab key=<nop>
-        "map <D-t> :CommandT<CR>
-        " make Mac's Option key behave as the Meta key
+        set guifont=Menlo:h12
+        set transparency=7
     endif
 
     if has("gui_win32") || has("gui_win32s")
@@ -258,9 +257,14 @@ else
     "set railscasts colorscheme when running vim in gnome terminal
     if $COLORTERM == 'gnome-terminal'
         set term=gnome-256color
-        colorscheme railscasts
+        colorscheme molokai
     else
-        colorscheme v13
+        if $TERM == 'xterm'
+            set term=xterm-256color
+            colorscheme molokai
+        else
+            colorscheme default
+        endif
     endif
 endif
 
@@ -393,8 +397,8 @@ map <C-l> <C-w>l
 nmap <C-s> :w<CR>
 
 "key mapping for tab navigation
-nmap <Tab> gt
-nmap <S-Tab> gT
+nmap <S-Tab> gt
+nmap <C-S-Tab> gT
 
 "Key mapping for textmate-like indentation
 nmap <D-[> <<
@@ -521,3 +525,7 @@ inoremap <Esc>A <up>
 inoremap <Esc>B <down>
 inoremap <Esc>C <right>
 inoremap <Esc>D <left>
+
+if has("balloon_eval")
+  set noballooneval
+endif

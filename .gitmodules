@@ -178,6 +178,30 @@
 [submodule "bundle/vim-indexed-search"]
 	path = bundle/vim-indexed-search
 	url = git://github.com/henrik/vim-indexed-search.git
-[submodule "bundle/vim-command-t"]
-	path = bundle/vim-command-t
-	url = git://github.com/wincent/Command-T.git
+[submodule "bundle/ctrp"]
+	path = bundle/ctrp
+	url = git://github.com/kien/ctrlp.vim.git
+[submodule "bundle/vim-easymotion"]
+	path = bundle/vim-easymotion
+	url = git://github.com/Lokaltog/vim-easymotion.git
+[submodule "bundle/NrrRgn"]
+	path = bundle/NrrRgn
+	url = git://github.com/chrisbra/NrrwRgn.git
+[submodule "bundle/ZoomWin"]
+	path = bundle/ZoomWin
+	url = git://github.com/vim-scripts/ZoomWin.git
+[submodule "bundle/vim-buffergator"]
+	path = bundle/vim-buffergator
+	url = git://github.com/jeetsukumaran/vim-buffergator.git
+[submodule "bundle/vim-vroom"]
+	path = bundle/vim-vroom
+	url = git://github.com/skalnik/vim-vroom.git
+[submodule "bundle/vim-slim"]
+	path = bundle/vim-slim
+	url = git://github.com/bbommarito/vim-slim.git
+[submodule "bundle/webapi-vim"]
+	path = bundle/webapi-vim
+	url = git://github.com/mattn/webapi-vim.git
+[submodule "bundle/vim-ruby-run"]
+	path = bundle/vim-ruby-run
+	url = https://github.com/stjernstrom/vim-ruby-run
