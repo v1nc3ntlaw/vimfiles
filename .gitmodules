@@ -198,7 +198,7 @@
 	url = git://github.com/skalnik/vim-vroom.git
 [submodule "bundle/vim-slim"]
 	path = bundle/vim-slim
-	url = git://github.com/bbommarito/vim-slim.git
+	url = git@github.com:slim-template/vim-slim.git
 [submodule "bundle/webapi-vim"]
 	path = bundle/webapi-vim
 	url = git://github.com/mattn/webapi-vim.git
